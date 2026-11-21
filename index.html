@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' file: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' file: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://vibej.am; style-src 'self' 'unsafe-inline' file: https://fonts.googleapis.com; font-src 'self' data: file: https://fonts.gstatic.com; img-src 'self' data: blob: file: https://vibej.am; media-src 'self' data: blob: file:; connect-src 'self' data: blob: file: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com https://vibej.am; worker-src 'self' blob: file:;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' file: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' file: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' file: https://fonts.googleapis.com; font-src 'self' data: file: https://fonts.gstatic.com; img-src 'self' data: blob: file:; media-src 'self' data: blob: file:; connect-src 'self' data: blob: file: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com; worker-src 'self' blob: file:;">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>Hood Hound</title>
 <style>
@@ -78,13 +78,13 @@ body.mp-open #tut{opacity:1;transition:opacity .35s ease}
 #hwq .hwq-b{font-size:clamp(.7rem,2.1vw,.84rem);color:#e8f5e4;line-height:1.5;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.88),0 0 12px rgba(0,0,0,.4),0 0 1px rgba(255,255,255,.12)}
 #hwq .hwq-r{color:#f7b733;font-weight:700}
 </style></head><body>
-<div id="loading-screen"><img class="wanted-img" src="Hood_Hound_black_graff_intro.webp?v=20260428" onerror="this.onerror=null;this.src='Hood_Hound_black_graff_intro.webp';" alt="WANTED"><div class="tag">EVERY DOG HAS ITS DAY</div><div class="hint">Click anywhere to start</div><div class="jc"><img src="data:image/png;base64,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" alt="JUICED"></div></div>
+<div id="loading-screen"><img class="wanted-img" src="art/hood_hound_intro.webp" alt="Biscuit the Hood Hound"><div class="tag">EVERY DOG HAS ITS DAY</div><div class="hint">Click anywhere to start</div><div class="jc"><img src="data:image/png;base64,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" alt="JUICED"></div></div>
 <div id="tut"><div class="ti">FIND A MISSION!</div><div class="td">Walk to the glowing colored pillars, then press E or tap action button</div></div>
 <div id="hud"><div class="hb"><img class="di" src="data:image/png;base64,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" alt=""><div style="display:flex;flex-direction:column"><div class="ht">HOOD HOUND</div><div class="hs">Bones: <span id="bc">0</span> | Rep: <span id="rc">0</span></div></div></div><div id="hm" role="progressbar" aria-valuemin="0" aria-label="Main missions toward Cookie"><svg class="paw" viewBox="0 0 24 24"><path fill="#fc4a1a" d="M12 18c-2.2 0-4-1.5-4-3.5 0-1.3.8-2.5 2-3.2-.2-.8-.5-2.3.3-3.3.7-.9 1.7-1 1.7-1s1 .1 1.7 1c.8 1 .5 2.5.3 3.3 1.2.7 2 1.9 2 3.2 0 2-1.8 3.5-4 3.5zM7 11.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm10 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 7c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg><svg class="paw" viewBox="0 0 24 24"><path fill="#fc4a1a" d="M12 18c-2.2 0-4-1.5-4-3.5 0-1.3.8-2.5 2-3.2-.2-.8-.5-2.3.3-3.3.7-.9 1.7-1 1.7-1s1 .1 1.7 1c.8 1 .5 2.5.3 3.3 1.2.7 2 1.9 2 3.2 0 2-1.8 3.5-4 3.5zM7 11.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm10 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 7c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg><svg class="paw" viewBox="0 0 24 24"><path fill="#fc4a1a" d="M12 18c-2.2 0-4-1.5-4-3.5 0-1.3.8-2.5 2-3.2-.2-.8-.5-2.3.3-3.3.7-.9 1.7-1 1.7-1s1 .1 1.7 1c.8 1 .5 2.5.3 3.3 1.2.7 2 1.9 2 3.2 0 2-1.8 3.5-4 3.5zM7 11.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm10 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 7c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg><svg class="paw" viewBox="0 0 24 24"><path fill="#fc4a1a" d="M12 18c-2.2 0-4-1.5-4-3.5 0-1.3.8-2.5 2-3.2-.2-.8-.5-2.3.3-3.3.7-.9 1.7-1 1.7-1s1 .1 1.7 1c.8 1 .5 2.5.3 3.3 1.2.7 2 1.9 2 3.2 0 2-1.8 3.5-4 3.5zM7 11.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm10 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 7c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg><svg class="paw" viewBox="0 0 24 24"><path fill="#fc4a1a" d="M12 18c-2.2 0-4-1.5-4-3.5 0-1.3.8-2.5 2-3.2-.2-.8-.5-2.3.3-3.3.7-.9 1.7-1 1.7-1s1 .1 1.7 1c.8 1 .5 2.5.3 3.3 1.2.7 2 1.9 2 3.2 0 2-1.8 3.5-4 3.5zM7 11.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm10 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 7c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg></div><div class="hb" style="text-align:right"><div style="display:flex;flex-direction:column"><div class="hs">Mission: <span id="cm">Free Roam</span></div><div class="hs" id="mtr" style="display:none">Time: <span id="tv">0</span>s</div></div></div></div>
 </div>
 <div id="mp-dim" aria-hidden="true"></div>
 <div id="mp"><div class="mt" id="mti"></div><div class="ms" id="mde"></div></div>
-<div id="hwq" aria-live="polite" aria-atomic="true" role="status" aria-hidden="true"><div class="hwq-inner"><div class="hwq-t" id="hwq-ti">LOST STASH</div><div class="hwq-b" id="hwq-de">Find the stash (green <span class="hwq-r">W</span> on the minimap), bring it to the Hood Guy, earn a <span class="hwq-r">hot dog</span> (+1 bone) & rep. Press <span class="hwq-r">Q</span> (or Sniff) to pick up a <span class="hwq-r">green trail</span> to it.</div></div></div>
+<div id="hwq" aria-live="polite" aria-atomic="true" role="status" aria-hidden="true"><div class="hwq-inner"><div class="hwq-t" id="hwq-ti">LOST WALLET</div><div class="hwq-b" id="hwq-de">Find the crypto wallet (green <span class="hwq-r">W</span> on the minimap), bring it to the Hood Guy, earn a <span class="hwq-r">hot dog</span> (+1 bone) & rep. Press <span class="hwq-r">Q</span> (or Sniff) to pick up a <span class="hwq-r">green trail</span> to it.</div></div></div>
 <div id="msh" aria-hidden="true"><div class="msh-inner"><span class="msh-t">Mission</span><span class="msh-b">Press E to start</span></div></div>
 <div id="ip"><span>Press E to interact</span></div><div id="so"></div>
 <button id="at">MUSIC: ON</button>
@@ -93,7 +93,6 @@ body.mp-open #tut{opacity:1;transition:opacity .35s ease}
 <div id="mm"></div>
 <script src="lib/three.min.js"></script>
 <script src="lib/GLTFLoader.js"></script>
-<script src="vibejam-portal.js?v=vj20260430local"></script>
 <script>
 
 console.log("%c[HoodHound build] spicy-jamdog-crate-run-v81 (Super Fart bun crate delivery mission) loaded","background:#22aa55;color:#fff;padding:4px 8px;border-radius:4px;font-weight:bold");
@@ -761,18 +760,15 @@ spicyJamdogs:['spicy_jamdogs.glb','files/spicy_jamdogs.glb'],
 jambuns:['jambuns.glb','files/jambuns.glb'],
 hotdogCart:['hotdog_cart.glb','files/hotdog_cart.glb'],
 hotVendor:['hotdog_vendor.glb','files/hotdog_vendor.glb'],
-toxicWaste:['toxic_waste.glb','files/toxic_waste.glb'],
+toxicWaste:[],
 hardDrive:['3d+hard+drive.glb','files/3d+hard+drive.glb'],
-vibejamBandana:['Vibejam_bandana.glb','files/Vibejam_bandana.glb'],
-weedPack:['loststash+3d+model.glb','files/loststash+3d+model.glb'],
 cookieCollar:['cookie_collar.glb','files/cookie_collar.glb'],
 cookieCollarBadGuy:['thief.glb','files/thief.glb'],
-graffitiPng:['graffiti.webp','mix_spray_jam.webp','cursor_jam.webp','spray_jam.webp',
-  'cursor_2026.webp','juiced009.webp','juiced009.png','juiced009.jpg','juiced009.jpeg','cursor_wall_bleed.webp','levesio_graff.webp',
-  'tripo_3D_graff.webp','Cursor_graff 2.webp','Cursor_graff 3.webp','glif_graff 2.webp',
-  'Jamdogs_billboard.webp','Biscuit_game_billboard.webp','jamdogs_billboard2.webp',
-  'Vibejam_billboard.webp','glif.webp','sk13_.webp','Soret_wall.webp','bolt_new_transp.webp',
-  'wall_windows.png','wall_windows.webp','wall_windows.jpg']};
+graffitiPng:['graffiti.webp','juiced009.webp',
+  'art/juiced_tag_stay.webp','art/juiced_tag_handle.webp','art/juiced_tag_logo.webp',
+  'art/juiced_mural_logo.webp','art/juiced_mural_stay.webp','art/juiced_mural_biscuit.webp','art/juiced_mural_dawgs.webp','art/juiced_mural_drop.webp',
+  'Jamdogs_billboard.webp','art/Biscuit_game_billboard.webp','jamdogs_billboard2.webp','art/juiced_billboard.webp',
+  'art/wall_windows.webp']};
 var boxBldgCol=0;
 var BLDG_SLOTS=[[-70,18,12,10,10,0],[-55,20,10,14,12,0],[-30,17,8,8,8,0],[10,18,10,10,10,0],[25,20,8,12,12,0],[65,20,10,13,12,0],[80,18,8,8,8,0],[-70,-18,10,8,10,0],[-55,-20,12,12,12,0],[-30,-18,8,6,8,0],[10,-18,10,9,10,0],[50,-18,10,7,10,0],[65,-20,8,10,8,0],[80,-18,10,6,10,0],[-55,55,14,8,10,0],[-25,55,10,6,8,0],[13,55,12,10,10,0],[29,55,10,7,8,0],[60,55,14,9,10,0],[-50,-55,12,7,10,0],[-25,-55,10,10,8,0],[13,-55,14,8,10,0],[29,-55,10,6,8,0],[60,-55,12,9,10,0],[-74,-52,6,10,8,0],[-50,-52,6,8,8,0],[-74,-68,6,8,12,0],[-50,-68,6,9,8,0],[-29,35,8,7,7,0],[72,35,8,7,7,0],[-29,-36,8,7,7,0],[72,-36,8,7,7,0],[-15,68,8,9,7,0],[20,68,10,8,10,0],[55,68,9,8,7,0],[-15,-68,8,9,7,0],[20,-68,10,8,8,0],[55,-68,9,10,7,0],[-85,10,7,7,14,0],[-85,-10,7,7,16,0],[85,10,7,7,15,0],[85,-10,7,7,13,0],[-85,40,7,8,18,0],[85,40,7,8,16,0],[-85,-40,7,8,17,0],[85,-40,7,8,15,0],[0,80,10,8,20,0],[0,-80,10,8,18,0]];
 // Slots that exist in BLDG_SLOTS but were intentionally NOT placed by
@@ -973,7 +969,7 @@ function getGraffitiKeyMode(){
 function isLevelsioGraffKey(gk){
   if(!gk) return false;
   var s=String(gk).toLowerCase();
-  return s.indexOf('levelsio')>=0 || s.indexOf('levesio')>=0;
+  return s.indexOf('juiced_mural_logo')>=0;
 }
 /** Dedicated PNG packs placed explicitly (full-wall bleed like Levelsio murals). */
 function isPackFullBleedGraffKey(gk){
@@ -983,7 +979,7 @@ function isPackFullBleedGraffKey(gk){
     s.indexOf('glif_graff_2')>=0||s.indexOf('tripo_3d_graff_3')>=0||
     s.indexOf('jamdogs_billboard')>=0||s.indexOf('biscuit_game_billboard')>=0||
     s.indexOf('jamdogsbillboard2')>=0||s.indexOf('jamdogs_billboard2')>=0||
-    s.indexOf('vibejam_billboard')>=0||s.indexOf('wall_windows')>=0;
+    s.indexOf('juiced_billboard')>=0||s.indexOf('wall_windows')>=0;
 }
 function isJamdogsBillboardGraffKey(gk){
   if(!gk) return false;
@@ -992,56 +988,36 @@ function isJamdogsBillboardGraffKey(gk){
 function isTripo3dGraffKey(gk){
   if(!gk) return false;
   var s=String(gk).toLowerCase();
-  if(s.indexOf('tripo_3d_graff_3')>=0) return false;
-  if(s.indexOf('levelsio')>=0||s.indexOf('levesio')>=0) return false;
-  if(s.indexOf('tripo_3d')>=0||s.indexOf('tripo3d')>=0) return true;
-  if(s.indexOf('tripo')>=0 && s.indexOf('graff')>=0) return true;
-  return false;
+  return s.indexOf('juiced_mural_stay')>=0;
 }
 function isBoltGraffKey(gk){
   if(!gk) return false;
   var s=String(gk).toLowerCase();
-  if(s.indexOf('levelsio')>=0||s.indexOf('levesio')>=0) return false;
-  if(s.indexOf('glif')>=0) return false;
-  if(isTripo3dGraffKey(gk)) return false;
-  if(s.indexOf('bolt')>=0 && (s.indexOf('new')>=0 || s.indexOf('graff')>=0)) return true;
-  if(s.indexOf('boltnew')>=0 || s.indexOf('bolt_new')>=0) return true;
-  return false;
+  return s.indexOf('juiced_mural_biscuit')>=0;
 }
 function isGlifGraffKey(gk){
   if(!gk) return false;
   var s=String(gk).toLowerCase();
-  if(s.indexOf('glif_graff_2')>=0) return false;
-  return s.indexOf('glif')>=0;
+  return s.indexOf('juiced_mural_dawgs')>=0;
 }
 function isVibeJamGraffKey(gk){
   if(!gk) return false;
   var s=String(gk).toLowerCase();
-  return s.indexOf('jam')>=0 && s.indexOf('cursor_wall_bleed')<0 && s.indexOf('cursor-wall-bleed')<0 && !isJamdogsBillboardGraffKey(gk);
+  return s.indexOf('juiced_tag')>=0;
 }
 function isSk13GraffKey(gk){
   if(!gk) return false;
-  if(isLevelsioGraffKey(gk)) return false;
-  return String(gk).toLowerCase().indexOf('sk13')>=0;
+  var s=String(gk).toLowerCase();
+  return s.indexOf('juiced_mural_drop')>=0;
 }
 function isSoretWallGraffKey(gk){
-  if(!gk) return false;
-  var s=String(gk).toLowerCase();
-  return s.indexOf('soret')>=0 && s.indexOf('wall')>=0;
+  return false;
 }
 function isBoltTranspGraffKey(gk){
-  if(!gk) return false;
-  var s=String(gk).toLowerCase();
-  if(s.indexOf('levelsio')>=0||s.indexOf('levesio')>=0) return false;
-  if(s.indexOf('bolt')<0||s.indexOf('transp')<0) return false;
-  if(isBoltGraffKey(gk)) return false;
-  return true;
+  return false;
 }
 function isCursorWallBleedGraffKey(gk){
-  if(!gk) return false;
-  var s=String(gk).toLowerCase();
-  if(isLevelsioGraffKey(gk)) return false;
-  return s.indexOf('cursor_wall_bleed')>=0 || (s.indexOf('cursor')>=0 && s.indexOf('bleed')>=0);
+  return false;
 }
 function isFullBleedWallGraffKey(gk){
   return isPackFullBleedGraffKey(gk) || isLevelsioGraffKey(gk) || isTripo3dGraffKey(gk) || isBoltGraffKey(gk) || isGlifGraffKey(gk) || isSk13GraffKey(gk) || isSoretWallGraffKey(gk) || isBoltTranspGraffKey(gk) || isCursorWallBleedGraffKey(gk);
@@ -1183,7 +1159,7 @@ function applyGraffitiPngToCanvasTexture(texIn, gk){
 function tryLoadRandomGraffitiPng(){
   if(!boxBuildings.length||!window.THREE||!THREE.TextureLoader)return;
   var forcedJuiced=typeof assetCandidates==='function'?assetCandidates(['juiced009.webp','juiced009.png','juiced009.jpg','juiced009.jpeg']):['juiced009.webp','files/juiced009.webp'];
-  var forcedWallWin=typeof assetCandidates==='function'?assetCandidates(['wall_windows.png','wall_windows.webp','wall_windows.jpg']):['wall_windows.png','files/wall_windows.png'];
+  var forcedWallWin=typeof assetCandidates==='function'?assetCandidates(['art/wall_windows.webp']):['art/wall_windows.webp'];
   var urlOv=getGraffitiImagePathsFromUrl();
   var list=!urlOv||!urlOv.length?getDefaultGraffitiLoadList():urlOv.concat(forcedJuiced).concat(forcedWallWin);
   if(!list.length) return;
@@ -2047,8 +2023,46 @@ dp.walkAction.clampWhenFinished=false;
 dp.walkAction.reset();
 dp.walkAction.play();
 }
+equipJuicedBandana(S.juicedDrop);
 }});
 scene.add(dog);
+
+// ---- Juiced bandana (worn by Biscuit; the dumpster bonus unlocks the orange "drop" colorway)
+var juicedBandanaTexCache={};
+function juicedBandanaTex(drop,band){
+  var k=(drop?'drop':'black')+(band?'-band':'');
+  if(juicedBandanaTexCache[k])return juicedBandanaTexCache[k];
+  var t=new THREE.TextureLoader().load('art/juiced_'+(band?'bandana':'flap')+(drop?'_drop':'')+'.webp');
+  t.encoding=THREE.sRGBEncoding;t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=4;
+  if(band)t.repeat.set(2.4,0.32);
+  juicedBandanaTexCache[k]=t;return t;
+}
+function makeJuicedBandanaMesh(drop){
+  var g=new THREE.Group();
+  var bandM=new THREE.MeshStandardMaterial({map:juicedBandanaTex(drop,true),roughness:0.85,side:THREE.DoubleSide});
+  var flapM=new THREE.MeshStandardMaterial({map:juicedBandanaTex(drop,false),roughness:0.85,side:THREE.DoubleSide});
+  var band=new THREE.Mesh(new THREE.CylinderGeometry(0.19,0.225,0.13,22,1,true),bandM);
+  band.rotation.x=1.15;g.add(band);
+  var sh=new THREE.Shape();sh.moveTo(-0.23,0);sh.lineTo(0.23,0);sh.lineTo(0,-0.32);sh.lineTo(-0.23,0);
+  var fg=new THREE.ShapeGeometry(sh),pa=fg.attributes.position,ua=fg.attributes.uv;
+  for(var i=0;i<pa.count;i++)ua.setXY(i,(pa.getX(i)+0.23)/0.46,(pa.getY(i)+0.32)/0.32);
+  var flap=new THREE.Mesh(fg,flapM);flap.position.set(0,-0.08,0.12);flap.rotation.x=-0.28;g.add(flap);
+  var knotM=new THREE.MeshStandardMaterial({color:drop?0xff8c1a:0x141416,roughness:0.8});
+  var knot=new THREE.Mesh(new THREE.SphereGeometry(0.05,8,6),knotM);knot.position.set(0,0.2,-0.08);g.add(knot);
+  for(var t2=0;t2<2;t2++){var tail=new THREE.Mesh(new THREE.BoxGeometry(0.06,0.14,0.02),flapM);tail.position.set(t2?0.04:-0.04,0.15,-0.13);tail.rotation.set(0.6,0,t2?-0.35:0.35);g.add(tail);tail.material=bandM;}
+  g.traverse(function(o){if(o.isMesh)o.castShadow=true;});
+  return g;
+}
+function equipJuicedBandana(drop){
+  if(!dp.modelRoot)return;
+  if(dp.juicedBandana&&dp.juicedBandana.parent)dp.juicedBandana.parent.remove(dp.juicedBandana);
+  var g=makeJuicedBandanaMesh(!!drop);
+  g.position.set(0,0.8,0.4);
+  dog.add(g);
+  var neck=dp.modelRoot.getObjectByName('tripoHead_0')||dp.modelRoot.getObjectByName('tripo::Head_0');
+  if(neck){dog.updateMatrixWorld(true);neck.attach(g);}
+  dp.juicedBandana=g;S.juicedDrop=!!drop;
+}
 
 // WORLD
 var ia=[],bones=[],npcs=[],cats=[],mBs=[],catAlleyDumpsters=[];
@@ -2424,6 +2438,27 @@ function normalizeWeedPackModelMaterials(root){
     }
   });
 }
+/** Generic hardware crypto wallet (no real brand): dark slab, glowing screen, two buttons, keyring. */
+function makeCryptoWalletMesh(){
+  var root=new THREE.Group();
+  var bodyM=new THREE.MeshStandardMaterial({color:0x1c1c22,roughness:0.35,metalness:0.55});
+  var trimM=new THREE.MeshStandardMaterial({color:0xff8c1a,emissive:0x662e00,emissiveIntensity:0.5,roughness:0.4,metalness:0.6});
+  var cv=document.createElement('canvas');cv.width=256;cv.height=96;var c=cv.getContext('2d');
+  c.fillStyle='#021a10';c.fillRect(0,0,256,96);c.fillStyle='#39ff88';c.font='bold 34px monospace';c.textAlign='center';c.textBaseline='middle';
+  c.fillText('₿ 13.37',128,36);c.font='bold 20px monospace';c.fillStyle='#a6e629';c.fillText('WHOLE BAG',128,72);
+  var scrT=new THREE.CanvasTexture(cv);scrT.encoding=THREE.sRGBEncoding;
+  var scrM=new THREE.MeshStandardMaterial({map:scrT,emissive:0xffffff,emissiveMap:scrT,emissiveIntensity:0.9,roughness:0.2});
+  var body=new THREE.Mesh(new THREE.BoxGeometry(0.62,1.0,0.16),bodyM);root.add(body);
+  var bevel=new THREE.Mesh(new THREE.BoxGeometry(0.66,0.06,0.18),trimM);bevel.position.y=0.5;root.add(bevel);
+  var bevel2=bevel.clone();bevel2.position.y=-0.5;root.add(bevel2);
+  var scr=new THREE.Mesh(new THREE.PlaneGeometry(0.5,0.3),scrM);scr.position.set(0,0.18,0.082);root.add(scr);
+  for(var b=0;b<2;b++){var btn=new THREE.Mesh(new THREE.CylinderGeometry(0.07,0.07,0.05,16),trimM);btn.rotation.x=Math.PI/2;btn.position.set(b?0.14:-0.14,-0.24,0.09);root.add(btn);}
+  var ring=new THREE.Mesh(new THREE.TorusGeometry(0.13,0.025,8,20),trimM);ring.position.set(0,0.64,0);root.add(ring);
+  var glow=new THREE.PointLight(0x39ff88,0.6,4,2);glow.position.set(0,0.3,0.4);root.add(glow);
+  root.rotation.x=-0.25;root.position.y=0.62;
+  root.traverse(function(o){if(o.isMesh){o.castShadow=true;}});
+  return root;
+}
 function addHoodWeedPlaceholderToGroup(g){
   var ph=new THREE.Mesh(new THREE.SphereGeometry(0.68,6,5), new THREE.MeshStandardMaterial({color:0x5c4a38,emissive:0x1a150f,emissiveIntensity:0.12,roughness:0.72,flatShading:true}));
   ph.position.set(0,0.4,0);
@@ -2447,23 +2482,10 @@ function addHoodWeed(x,z){
     g.userData.weedGltfRoot=root;
     g.userData.weedBaseY=0.3;
   }
-  if(!gltfLoader){
-    addHoodWeedPlaceholderToGroup(g);
-    return;
-  }
-  loadModelInto(g, modelPaths.weedPack, {clearChildren:true, scale:1.22, rotationY:0, alignBottomY:0, onLoaded:function(root){
-    var meshN=0;
-    root.traverse(function(ch){ if(ch.isMesh) meshN++; });
-    if(!meshN){
-      while(g.children.length)g.remove(g.children[0]);
-      addHoodWeedPlaceholderToGroup(g);
-      return;
-    }
-    finishGeo(root);
-  }, onError:function(){
-    while(g.children.length)g.remove(g.children[0]);
-    addHoodWeedPlaceholderToGroup(g);
-  }});
+  var w=makeCryptoWalletMesh();
+  g.add(w);
+  finishGeo(w);
+
 }
 function addHoodGuyFallbackToGroup(g){
   var skin=new THREE.MeshStandardMaterial({color:0x6b4a35,roughness:0.8,flatShading:true});
@@ -2875,7 +2897,7 @@ var bp=offsetPickupAwayFromDog(d.x+1.75,d.z+0.85,3.0,0.9);
 g.position.set(bp.x,0.08,bp.z);
 var halo=new THREE.Mesh(new THREE.TorusGeometry(0.75,0.04,8,36),new THREE.MeshStandardMaterial({color:0xff66ff,emissive:0xff22aa,emissiveIntensity:0.85,transparent:true,opacity:0.55,depthWrite:false}));
 halo.rotation.x=Math.PI/2;halo.position.y=0.04;g.add(halo);g.userData.halo=halo;
-loadModelInto(g,modelPaths.vibejamBandana,{clearChildren:false,scale:1.2,rotationY:0,alignBottomY:0.08,onLoaded:function(root){setShadows(root);},onError:function(){addVibejamBandanaFallback(g);}});
+var pk=makeJuicedBandanaMesh(true);pk.scale.setScalar(2.4);pk.position.y=0.75;g.add(pk);g.userData.spin=pk;
 scene.add(g);vibejamBandanaGroup=g;
 sfx('bone');burst(g.position.x,0.9,g.position.z,[0xff66ff,0xffcc22,0xffffff,0x44ddff],24,1.2,4.5);
 }
@@ -3028,7 +3050,7 @@ mkP(0,-68);
 mkP(-40,-68);
 mkP(-60,-72);
 // Levelsio: south-center — in front of sk13 full-bleed (building faces toward ~z=-68); brown dirt beside mkTr pine (-13,-57).
-mkLevelsioLaptopMissionNpc(-11,-59,'levelsio_job','LEVELSIO JOB',0xffcc22);
+mkLevelsioLaptopMissionNpc(-11,-59,'levelsio_job','LAPTOP LARRY',0xffcc22);
 mkMB(-55,-8,'territory','TURF WAR',0x00ff66,{bonus:true,noBeam:true});
 mkMB(22,-36,'dumpster_dive','DUMPSTER DIVE',0xff66ff,{bonus:true,noBeam:true});
 mkBikeGuyMissionNpc(60,8,'cop_heat','COP DROP',0xff2200);
@@ -3611,7 +3633,7 @@ var sM=new THREE.ShaderMaterial({uniforms:{topColor:{value:new THREE.Color(0xff6
 scene.add(new THREE.Mesh(new THREE.SphereGeometry(180,32,16),sM));
 
 // Missions
-var MS=[{id:'levelsio_job',name:'LEVELSIO JOB',desc:'Kleptomaniac cats stole Levelsio\'s hard drive with all the new AI ideas. Bark twice at the cat alley cats, search every cat-alley dumpster until the drive pops out, then bring it back to Levelsio. Reward: 2 packs of Jamdogs — one for Biscuit and one for Cookie.',time:90,target:1,rb:0,rr:30},{id:'spicy_jamdog',name:'SPICY JAMDOGS',desc:'eat a pack of Spicy ones to activate the Super Fart mode and pick up those buns',time:null,target:5,rb:4,rr:45},{id:'cat_chase',name:'COOKIE\'S COLLAR',desc:'Word on the street is some wannabe G stole Cookie\'s diamond collar. Find him somewhere on the map, get close, fart to make him pass out, grab the collar, then bring it back to Cookie.',time:null,target:1,rb:8,rr:12},{id:'territory',name:'TURF WAR',desc:'Bonus mission: pee on every hydrant to claim cat-free turf zones for 3 minutes. Claim them all for +50 Rep.',time:null,target:8,rb:0,rr:50,bonus:true},{id:'dumpster_dive',name:'DUMPSTER DIVING',desc:'Bonus mission: search 5 dumpsters. On the fifth one, a Vibejam bandana pops out as a pickup reward.',time:null,target:5,rb:15,rr:10,bonus:true},{id:'cop_heat',name:'COP DROP',desc:'Biscuit needs to shit on the roof of 3/3 police cars, then return to Bike Guy for a pack of hotdog weeners. No time limit.',time:null,target:3,rb:3,rr:100},{id:'hood_weed',name:'LOST STASH',desc:'Find the stash (green W on the minimap) and return it. Press Q to sniff for a green trail. Stash is never right next to the Hood Guy.',time:120,target:1,rb:1,rr:20}];
+var MS=[{id:'levelsio_job',name:'LAPTOP LARRY',desc:'Kleptomaniac cats stole Laptop Larry\'s hard drive with all his billion-dollar startup ideas. Bark twice at the cat alley cats, search every cat-alley dumpster until the drive pops out, then bring it back to Larry. Reward: 2 packs of Jamdogs — one for Biscuit and one for Cookie.',time:90,target:1,rb:0,rr:30},{id:'spicy_jamdog',name:'SPICY JAMDOGS',desc:'eat a pack of Spicy ones to activate the Super Fart mode and pick up those buns',time:null,target:5,rb:4,rr:45},{id:'cat_chase',name:'COOKIE\'S COLLAR',desc:'Word on the street is some wannabe G stole Cookie\'s diamond collar. Find him somewhere on the map, get close, fart to make him pass out, grab the collar, then bring it back to Cookie.',time:null,target:1,rb:8,rr:12},{id:'territory',name:'TURF WAR',desc:'Bonus mission: pee on every hydrant to claim cat-free turf zones for 3 minutes. Claim them all for +50 Rep.',time:null,target:8,rb:0,rr:50,bonus:true},{id:'dumpster_dive',name:'DUMPSTER DIVING',desc:'Bonus mission: search 5 dumpsters. On the fifth one, a Juiced bandana pops out. Biscuit wears it for the rest of the game.',time:null,target:5,rb:15,rr:10,bonus:true},{id:'cop_heat',name:'COP DROP',desc:'Biscuit needs to shit on the roof of 3/3 police cars, then return to Bike Guy for a pack of hotdog weeners. No time limit.',time:null,target:3,rb:3,rr:100},{id:'hood_weed',name:'LOST WALLET',desc:'Hood Guy dropped his hardware crypto wallet with his whole bag on it. Find it (green W on the minimap) and bring it back. Press Q to sniff for a green trail.',time:120,target:1,rb:1,rr:20}];
 function stM(id){if(S.missionActive)return;var m=null;for(var i=0;i<MS.length;i++)if(MS[i].id===id){m=MS[i];break;}if(!m)return;
 if(id==='cop_heat'){S.copHeatReadyForReward=false;for(var cpi=0;cpi<ia.length;cpi++){if(ia[cpi].type==='police_car')ia[cpi].poopedOn=false;}}
 if(id==='hood_weed'){S.hoodWeedPicked=false;S.hoodWeedHandinPending=false;yoBiscuitCooldown=0;if(hoodWeedMesh){hoodWeedMesh.userData.collected=false;syncHoodWeedStashPosition(hoodWeedMesh);hoodWeedMesh.visible=true;for(var hwi=0;hwi<hoodWeedMesh.children.length;hwi++)hoodWeedMesh.children[hwi].visible=true;}}
@@ -3642,7 +3664,7 @@ S.levelsioDriveSpawned=false;
 S.levelsioDrivePicked=false;
 syncHudCookieProgress();
 var rem=S.missionsRequired-S.missionsCompleted;
-if(m){if(m.id==='hood_weed'){pauseYoBiscuit();}if(m.id==='cat_chase'){S.cookieCollarHeld=false;showMission('HOME SAFE!','Cookie clips her collar back on. Good dog, Biscuit.',3500);}if(m.id==='cop_heat'){showMission('HOTDOG WEENERS!','Bike Guy hooks Biscuit up with a pack of hotdog weeners. +3 Bones',3500);}if(m.id==='levelsio_job'){showMission('JAMDOGS SECURED!','Levelsio gets his AI ideas back and rewards Biscuit with 2 packs of Jamdogs: one for Biscuit and one for Cookie.',3500);}if(m.id==='spicy_jamdog'){showMission('BUN CRATES SAVED!','Biscuit recovered the vendor\'s lost bun packages. +4 Bones',3500);}if(m.rb)addB(m.rb);addR(m.rr);}
+if(m){if(m.id==='hood_weed'){pauseYoBiscuit();}if(m.id==='cat_chase'){S.cookieCollarHeld=false;showMission('HOME SAFE!','Cookie clips her collar back on. Good dog, Biscuit.',3500);}if(m.id==='cop_heat'){showMission('HOTDOG WEENERS!','Bike Guy hooks Biscuit up with a pack of hotdog weeners. +3 Bones',3500);}if(m.id==='levelsio_job'){showMission('JAMDOGS SECURED!','Larry gets his startup ideas back and rewards Biscuit with 2 packs of Jamdogs: one for Biscuit and one for Cookie.',3500);}if(m.id==='spicy_jamdog'){showMission('BUN CRATES SAVED!','Biscuit recovered the vendor\'s lost bun packages. +4 Bones',3500);}if(m.rb)addB(m.rb);addR(m.rr);}
 if(m)spawnJamDogsReward(m.id);
 // Confetti burst on mission complete
 shake(0.2,0.4);
@@ -3862,7 +3884,7 @@ function spawnLevelsioHardDrive(x,z){
   scene.add(g);
   levelsioDriveGroup=g;
   S.levelsioDriveSpawned=true;
-  showMission('HARD DRIVE FOUND!','Levelsio\'s hard drive popped out next to the dumpster. Grab it before the cats do.',4000);
+  showMission('HARD DRIVE FOUND!','Larry\'s hard drive popped out next to the dumpster. Grab it before the cats do.',4000);
   sfx('bone');
 }
 function levelsioHardDriveBesideDumpster(wx,wz){
@@ -3923,7 +3945,7 @@ for(var lci=0;lci<cats.length;lci++){
   burst(lcc.position.x,0.6,lcc.position.z,[0x44ddff,0xffcc22,0xffffff],12,0.9,4.5);
 }
 if(S.levelsioBarks>=2){clearLevelsioAlleyCats();showMission('CATS SCATTERED!','They bolt out of the dumpster lane. Now search every cat alley dumpster.',4000);}
-else showMission('LEVELSIO JOB','Bark once more at the cat alley cats to scare them off the hard drive.',3500);
+else showMission('LAPTOP LARRY','Bark once more at the cat alley cats to scare them off the hard drive.',3500);
 barkMissionHandled=true;
 }
 for(var i=0;i<npcs.length;i++){var dx=npcs[i].position.x-dog.position.x,dz=npcs[i].position.z-dog.position.z;if(Math.sqrt(dx*dx+dz*dz)<8)adjH(0.5);}
@@ -4046,7 +4068,7 @@ for(var pi=0;pi<6;pi++){(function(idx){setTimeout(function(){var pd=new THREE.Me
 }
 else if(t.type==='dumpster'&&!t.searched){
 if(S.missionActive&&S.missionType==='levelsio_job'&&t.isCatAlleyDumpster){
-  if(S.levelsioBarks<2){showMission('LEVELSIO JOB','Scare the cat alley cats first — bark at them 2 times.',3000);return;}
+  if(S.levelsioBarks<2){showMission('LAPTOP LARRY','Scare the cat alley cats first — bark at them 2 times.',3000);return;}
   t.searched=true;
   S.levelsioDumpstersSearched++;
   sfx('trash');
@@ -4070,7 +4092,7 @@ if(S.missionType==='dumpster_dive'){
   }
 }}
 else if(t.type==='cat'){showMission('CHASE!','The cat bolts!',3000);sfx('cat');var c=t.group;c.userData.fleeAngle=Math.atan2(c.position.z-dog.position.z,c.position.x-dog.position.x);c.userData.fleeTimer=3;addR(2);}
-else if(t.type==='portal'){showMission('VIBE JAM PORTAL','Entering the Webring...',3000);}
+else if(t.type==='portal'){showMission('JUICED PORTAL','Still charging. New hoods dropping soon. Stay Juiced.',3000);}
 else if(t.type==='police_car'&&!t.poopedOn&&S.jumpY>1.0){
   t.poopedOn=true;sfx('poop');if(t.isBikeGuyCopCar)playBigPileVoice();if(t.playShiterVo)playBiscuitShiterVoice();shake(0.15,0.2);showMission('💩 ON THE COP CAR!','Biscuit is a BAD BOY! +10 Rep',3000);addR(10);
   // Turd on car roof
@@ -4092,7 +4114,7 @@ else if(t.type==='mission_board'){
   }
   if(t.missionId==='levelsio_job'&&S.missionActive&&S.missionType==='levelsio_job'){
     if(S.levelsioDrivePicked){S.missionScore=1;cM();return;}
-    showMission('LEVELSIO JOB','Bring Levelsio his hard drive, then collect 2 packs of Jamdogs: one for Biscuit and one for Cookie.',3500);
+    showMission('LAPTOP LARRY','Bring Larry his hard drive, then collect 2 packs of Jamdogs: one for Biscuit and one for Cookie.',3500);
     return;
   }
   if(t.missionId==='spicy_jamdog'&&S.missionActive&&S.missionType==='spicy_jamdog'){
@@ -4107,10 +4129,10 @@ else if(t.type==='hood_guy'){
   if(S.missionActive && S.missionType && S.missionType!=='hood_weed'){showMission('HOOD GUY','Finish your current run first, pup.',3000);return;}
   if(!S.missionActive) stM('hood_weed');
   else if(S.missionType==='hood_weed' && S.hoodWeedPicked && !S.hoodWeedHandinPending){
-    showMission('HANDOFF','Ayy, that\'s my pack',3000);
+    showMission('HANDOFF','Ayy, my whole bag is back! Seed phrase safe.',3000);
     startHoodGuyAgreeThenComplete();
   } else if(S.missionType==='hood_weed' && !S.hoodWeedPicked){
-    showMission('HOOD GUY','Sniff the alleys — my bag\'s out there. Bring it back, you get a hot dog.',3000);
+    showMission('HOOD GUY','Lost my crypto wallet, whole bag on it. Sniff it out and you get a hot dog.',3000);
   }
 }
 else if(t.type==='cookie'){
@@ -4611,7 +4633,7 @@ if(S.missionsCompleted===0&&!S.tutorialShown&&!S.arrivedViaVibeJamPortal){
 for(var i=0;i<bones.length;i++){var b=bones[i];if(b.userData.collected)continue;var dx=b.position.x-dog.position.x,dz=b.position.z-dog.position.z;if(Math.sqrt(dx*dx+dz*dz)<1.5){b.userData.collected=true;b.visible=false;addB(1);addR(1);showMission('BONE!','+1 Bone!',3000,true);
 burst(b.position.x,0.8,b.position.z,[0xffee44,0xffffff,0xffaa22],10,0.4,3);
 }b.position.y=0.5+Math.sin(t*3+b.position.x)*0.15;b.rotation.y=t*2;if(b.children[3])b.children[3].rotation.z=t*2;}
-if(hoodWeedMesh&&S.missionActive&&S.missionType==='hood_weed'&&!hoodWeedMesh.userData.collected){var wx=hoodWeedMesh.position.x-dog.position.x,wz=hoodWeedMesh.position.z-dog.position.z;if(wx*wx+wz*wz<2.25){hoodWeedMesh.userData.collected=true;hoodWeedMesh.visible=false;S.hoodWeedPicked=true;showMission('BAG SECURED!','Trot it back to the Hood Guy and press E.',3000);sfx('bone');}}
+if(hoodWeedMesh&&S.missionActive&&S.missionType==='hood_weed'&&!hoodWeedMesh.userData.collected){var wx=hoodWeedMesh.position.x-dog.position.x,wz=hoodWeedMesh.position.z-dog.position.z;if(wx*wx+wz*wz<2.25){hoodWeedMesh.userData.collected=true;hoodWeedMesh.visible=false;S.hoodWeedPicked=true;showMission('WALLET SECURED!','Whole bag still on it. Trot it back to the Hood Guy and press E.',3000);sfx('bone');}}
 if(hoodWeedMesh&&hoodWeedMesh.visible&&!hoodWeedMesh.userData.collected){
   hoodWeedMesh.position.y=(hoodWeedMesh.userData.baseGroundY||0.02)+Math.sin(t*2.8)*0.08;
   hoodWeedMesh.rotation.x=Math.sin(t*1.4)*0.2;
@@ -4620,7 +4642,7 @@ if(hoodWeedMesh&&hoodWeedMesh.visible&&!hoodWeedMesh.userData.collected){
 }
 if(levelsioDriveGroup&&S.missionActive&&S.missionType==='levelsio_job'&&!S.levelsioDrivePicked&&levelsioDriveGroup.userData&&!levelsioDriveGroup.userData.picked){
   var hdx=levelsioDriveGroup.position.x-dog.position.x,hdz=levelsioDriveGroup.position.z-dog.position.z;
-  if(hdx*hdx+hdz*hdz<2.25){levelsioDriveGroup.userData.picked=true;levelsioDriveGroup.visible=false;S.levelsioDrivePicked=true;showMission('HARD DRIVE SECURED!','Bring it back to Levelsio to get 2 packs of Jamdogs: one for Biscuit and one for Cookie.',4000);sfx('bone');}
+  if(hdx*hdx+hdz*hdz<2.25){levelsioDriveGroup.userData.picked=true;levelsioDriveGroup.visible=false;S.levelsioDrivePicked=true;showMission('HARD DRIVE SECURED!','Bring it back to Larry to get 2 packs of Jamdogs: one for Biscuit and one for Cookie.',4000);sfx('bone');}
 }
 if(levelsioDriveGroup&&levelsioDriveGroup.visible&&!levelsioDriveGroup.userData.picked){
   var hBase=levelsioDriveGroup.userData.baseGroundY||0.08,hAge=t-(levelsioDriveGroup.userData.spawnT||t),hPop=Math.min(1,Math.max(0,hAge/0.55));
@@ -4693,7 +4715,7 @@ if(vibejamBandanaGroup){
     if(vdx*vdx+vdz*vdz<2.25){
       vibejamBandanaGroup.userData.picked=true;
       vibejamBandanaGroup.visible=false;
-      showMission('VIBEJAM BANDANA!','Biscuit picked up the bonus bandana.',3000,true);
+      showMission('JUICED BANDANA!','Biscuit is dripping in Juiced now. Fresh fit unlocked.',3200,true);if(typeof equipJuicedBandana==='function')equipJuicedBandana(true);
       sfx('bone');
       burst(dog.position.x,1.0,dog.position.z,[0xff66ff,0xffcc22,0xffffff],18,1.0,4);
     }else{
@@ -4878,16 +4900,6 @@ for(var hi=0;hi<cookieHearts.length;hi++)cookieHearts[hi].material.opacity=0.6+p
 if(S.missionActive&&S.missionTimer!=null){S.missionTimer-=dt;document.getElementById('tv').textContent=Math.max(0,Math.ceil(S.missionTimer));if(S.missionTimer<=0)fM();}
 drawMM();renderer.render(scene,camera);}
 window.addEventListener('resize',function(){camera.aspect=window.innerWidth/window.innerHeight;camera.updateProjectionMatrix();renderer.setSize(window.innerWidth,window.innerHeight);});
-if(typeof initVibeJamPortals==='function'){
-initVibeJamPortals({
-scene:scene,
-getPlayer:function(){return dog;},
-spawnPoint:{x:93,y:11,z:52},
-exitPosition:{x:-94,y:11,z:0},
-exitLabel:'VIBE JAM PORTAL',
-startLabel:'BACK WE GO'
-});
-}
 (function(){
 if(!S.arrivedViaVibeJamPortal)return;
 S.tutorialShown=true;
@@ -4899,5 +4911,5 @@ if(typeof startGame==='function')startGame();
 animate();
 }catch(err){var ed=document.createElement('div');ed.style.cssText='position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);color:red;background:#000;padding:20px;z-index:9999;font-size:14px;max-width:80vw;word-break:break-all';ed.textContent='ERROR: '+err.message;document.body.appendChild(ed);}
 </script>
-<script>(function(){function skip(){try{return window.__hoodHoundVibeJamLocal===true}catch(e){return false}}if(skip()){console.info('[Hood Hound] vibej.am widget omitted (local test mode). Use ?vjprod=1 with localhost to load it.');return;}var s=document.createElement('script');s.async=true;s.src='https://vibej.am/2026/widget.js';document.body.appendChild(s);})();</script>
+
 </body></html>
