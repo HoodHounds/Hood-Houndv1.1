@@ -341,6 +341,54 @@ def bandana_flap(name, bg, fg=(255, 255, 255)):
     save(im.convert('RGB'), name, 90)
 
 
+def road_texture():
+    """Seamless asphalt (tiles in both directions) for the streets: grain, soft patches, a few cracks."""
+    n = 512
+    base = Image.new('RGB', (n, n), (66, 60, 70))
+    grain = Image.effect_noise((n, n), 40).convert('RGB')
+    im = Image.blend(base, ImageChops.multiply(base, grain).point(lambda v: min(255, int(v * 2.2))), 0.45)
+    blot = Image.new('L', (n, n), 128)
+    d = ImageDraw.Draw(blot)
+    for _ in range(26):
+        x, y, r = random.randint(0, n), random.randint(0, n), random.randint(20, 80)
+        v = random.randint(95, 165)
+        for ox in (-n, 0, n):
+            for oy in (-n, 0, n):
+                d.ellipse([x + ox - r, y + oy - r, x + ox + r, y + oy + r], fill=v)
+    big = Image.new('L', (n * 3, n * 3))
+    for ox in range(3):
+        for oy in range(3):
+            big.paste(blot, (ox * n, oy * n))
+    blot = big.filter(ImageFilter.GaussianBlur(30)).crop((n, n, 2 * n, 2 * n))
+    im = Image.merge('RGB', [ImageChops.multiply(c, blot.point(lambda v: min(255, v * 2))) for c in im.split()])
+    d = ImageDraw.Draw(im)
+    for _ in range(5):
+        x, y = random.randint(40, n - 40), random.randint(40, n - 40)
+        pts = [(x, y)]
+        for _ in range(6):
+            x += random.randint(-14, 14); y += random.randint(6, 18); pts.append((x, y))
+        d.line(pts, fill=(38, 34, 40), width=2)
+    im.save(os.path.join(ROOT, 'road02.jpg'), 'JPEG', quality=84)
+
+
+def og_image():
+    """1200x630 link-preview image (Open Graph / X cards)."""
+    im = Image.new('RGBA', (1200, 630), (11, 10, 13, 255))
+    glow = Image.new('RGBA', im.size, (0, 0, 0, 0))
+    ImageDraw.Draw(glow).ellipse([-40, -80, 720, 700], fill=PINK + (120,))
+    im.alpha_composite(glow.filter(ImageFilter.GaussianBlur(90)))
+    poster = Image.open(os.path.join(OUT, 'hood_hound_intro.webp')).convert('RGBA').resize((570, 570), Image.LANCZOS)
+    im.alpha_composite(poster, (30, 30))
+    lg = logo(470)
+    im.alpha_composite(lg, (660, 120))
+    d = ImageDraw.Draw(im)
+    d.text((895, 330), 'x HOOD HOUND', font=font('Bungee', 46), fill=GOLD, anchor='mm')
+    d.text((895, 410), 'PLAY FREE IN YOUR BROWSER', font=font('Bungee', 28), fill=(255, 255, 255), anchor='mm')
+    d.rounded_rectangle([700, 455, 1090, 525], radius=18, fill=ORANGE)
+    d.text((895, 490), TEXT['site'], font=font('Bungee', 30), fill=INK, anchor='mm')
+    im.convert('RGB').save(os.path.join(OUT, 'og.jpg'), 'JPEG', quality=88)
+
+
 # Regions measured on the source images (1024x1024).
 BISCUIT_BB_TEXT_BOX = (148, 592, 882, 738)
 INTRO_JAM_BOX = (700, 820, 962, 962)
@@ -363,4 +411,6 @@ if __name__ == '__main__':
     bandana_texture('juiced_bandana_drop.webp', ORANGE)
     bandana_flap('juiced_flap.webp', (16, 16, 18))
     bandana_flap('juiced_flap_drop.webp', ORANGE)
+    road_texture()
+    og_image()
     print('wrote art to', OUT)
