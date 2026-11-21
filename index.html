@@ -77,6 +77,29 @@ body.mp-open #tut{opacity:1;transition:opacity .35s ease}
 #hwq .hwq-t{font-family:'Bungee',cursive;font-size:clamp(.72rem,2.2vw,.88rem);color:#a8f0a0;letter-spacing:.04em;margin-bottom:4px}
 #hwq .hwq-b{font-size:clamp(.7rem,2.1vw,.84rem);color:#e8f5e4;line-height:1.5;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.88),0 0 12px rgba(0,0,0,.4),0 0 1px rgba(255,255,255,.12)}
 #hwq .hwq-r{color:#f7b733;font-weight:700}
+
+/* ---- Juiced: HUD shop button + end card */
+#shop{position:fixed;top:140px;right:16px;z-index:500;display:block;background:linear-gradient(90deg,#ff8c1a,#ff3d7f);border:2px solid rgba(0,0,0,.55);color:#fff;font-family:'Bungee',cursive;font-size:.75rem;padding:10px 16px;border-radius:12px;text-decoration:none;letter-spacing:.5px;box-shadow:0 4px 18px rgba(255,61,127,.35);touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+#shop:hover{filter:brightness(1.1)}
+#endcard{position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;padding:16px;background:radial-gradient(circle at 50% 30%,rgba(255,61,127,.45),rgba(0,0,0,.92) 70%);color:#fff;text-align:center;animation:fu .8s ease forwards;overflow-y:auto}
+#endcard .ec{width:min(460px,100%);display:flex;flex-direction:column;gap:14px;align-items:stretch;margin:auto}
+#endcard .ec-t{font-family:'Bungee',cursive;font-size:clamp(2.2rem,10vw,3.6rem);line-height:1;background:linear-gradient(90deg,#ff3d7f,#ff8c1a,#f7b733);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+#endcard .ec-s{color:#ffd4e6;font-size:1.15rem}
+#endcard .ec-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+#endcard .ec-stat{background:rgba(255,255,255,.07);border:1px solid rgba(247,183,51,.3);border-radius:12px;padding:8px 4px}
+#endcard .ec-stat b{display:block;font-family:'Bungee',cursive;font-size:1.3rem;color:#f7b733}
+#endcard .ec-stat span{font-size:.8rem;color:#ccc;letter-spacing:1px}
+#endcard .ec-code{border:2px dashed #a6e629;border-radius:14px;padding:12px;background:rgba(166,230,41,.08)}
+#endcard .ec-code small{display:block;color:#a6e629;font-family:'Bungee',cursive;font-size:.8rem;letter-spacing:1px}
+#endcard .ec-code .ec-cv{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:6px}
+#endcard .ec-code code{font-family:'Bungee',cursive;font-size:1.6rem;color:#fff;letter-spacing:2px}
+#endcard button,#endcard a.ec-b{font-family:'Bungee',cursive;font-size:1rem;border-radius:14px;padding:14px;border:2px solid rgba(0,0,0,.4);cursor:pointer;text-decoration:none;color:#fff;display:block;touch-action:manipulation}
+#endcard .ec-shop{background:linear-gradient(90deg,#ff8c1a,#ff3d7f);font-size:1.2rem;box-shadow:0 6px 24px rgba(255,61,127,.45)}
+#endcard .ec-share{background:#7b3fe4}
+#endcard .ec-again{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25)}
+#endcard .ec-copy{font-size:.75rem;padding:8px 12px;background:#a6e629;color:#111}
+#endcard .ec-logo{height:42px;margin:4px auto 0;opacity:.9}
+@media(max-width:768px),(pointer:coarse){#shop{top:156px;right:10px;font-size:.62rem;padding:8px 12px}}
 </style></head><body>
 <div id="loading-screen"><img class="wanted-img" src="art/hood_hound_intro.webp" alt="Biscuit the Hood Hound"><div class="tag">EVERY DOG HAS ITS DAY</div><div class="hint">Click anywhere to start</div><div class="jc"><img src="data:image/png;base64,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" alt="JUICED"></div></div>
 <div id="tut"><div class="ti">FIND A MISSION!</div><div class="td">Walk to the glowing colored pillars, then press E or tap action button</div></div>
@@ -87,12 +110,13 @@ body.mp-open #tut{opacity:1;transition:opacity .35s ease}
 <div id="hwq" aria-live="polite" aria-atomic="true" role="status" aria-hidden="true"><div class="hwq-inner"><div class="hwq-t" id="hwq-ti">LOST WALLET</div><div class="hwq-b" id="hwq-de">Find the crypto wallet (green <span class="hwq-r">W</span> on the minimap), bring it to the Hood Guy, earn a <span class="hwq-r">hot dog</span> (+1 bone) & rep. Press <span class="hwq-r">Q</span> (or Sniff) to pick up a <span class="hwq-r">green trail</span> to it.</div></div></div>
 <div id="msh" aria-hidden="true"><div class="msh-inner"><span class="msh-t">Mission</span><span class="msh-b">Press E to start</span></div></div>
 <div id="ip"><span>Press E to interact</span></div><div id="so"></div>
-<button id="at">MUSIC: ON</button>
+<button id="at">MUSIC: ON</button><a id="shop" href="#" target="_blank" rel="noopener">SHOP JUICED</a>
 <div id="cb" role="log" aria-label="Keyboard controls"><span class="ct"><kbd>WASD</kbd> move</span><span class="ct"><kbd>Shift</kbd> sprint</span><span class="ct"><kbd>Q</kbd> sniff</span><span class="ct"><kbd>F</kbd> / <kbd>B</kbd> bark</span><span class="ct"><kbd>H</kbd> poop</span><span class="ct"><kbd>E</kbd> interact</span><span class="ct"><kbd>G</kbd> fart</span><span class="ct"><kbd>Space</kbd> jump / dismiss pop-up</span><span class="ct">mouse = camera</span></div>
 <div id="mc"><div class="jz" id="jz"><div class="jb"></div><div class="jt" id="jth"></div></div><div class="ab"><div class="abtn" id="bb">BARK</div><div class="abtn" id="bsn">SNIFF</div><div class="abtn" id="bac">ACT</div><div class="abtn" id="bj">JUMP</div><div class="abtn" id="bf">FART</div><div class="abtn" id="bp">POOP</div></div></div>
 <div id="mm"></div>
 <script src="lib/three.min.js"></script>
 <script src="lib/GLTFLoader.js"></script>
+<script src="juiced-config.js"></script>
 <script>
 
 console.log("%c[HoodHound build] spicy-jamdog-crate-run-v81 (Super Fart bun crate delivery mission) loaded","background:#22aa55;color:#fff;padding:4px 8px;border-radius:4px;font-weight:bold");
@@ -675,14 +699,15 @@ function updateParticles(dt){
 }
 // Slow motion helper
 function slowMo(factor,dur){S.slowMo=factor;S.slowMoTime=dur;}
-function startGame(){if(S.gameStarted)return;S.gameStarted=true;iA();initFxAudios();if(typeof loadFxBuffers==='function')loadFxBuffers();if(typeof prewarmYoBiscuitAudio==='function')prewarmYoBiscuitAudio();startMusic();setTimeout(function(){if(typeof loadYoBiscuitWebAudioBuffer==='function')loadYoBiscuitWebAudioBuffer();},900);var ls=document.getElementById('loading-screen');var portalFast=!!S.arrivedViaVibeJamPortal;if(portalFast){ls.style.transition='none';ls.classList.add('fade-out');ls.style.opacity='0';ls.style.pointerEvents='none';ls.style.display='none';}else{ls.classList.add('fade-out');setTimeout(function(){ls.style.display='none'},1000);}clock.getDelta();syncHudCookieProgress();if(!portalFast)showMission('FIND COOKIE!','Complete '+COOKIE_MAIN_MISSION_GOAL+' missions to win her heart — WASD/SPACE/B/Q/E',3000);}
+function startGame(){if(S.gameStarted)return;S.gameStarted=true;S.playStartedAt=Date.now();iA();initFxAudios();if(typeof loadFxBuffers==='function')loadFxBuffers();if(typeof prewarmYoBiscuitAudio==='function')prewarmYoBiscuitAudio();startMusic();setTimeout(function(){if(typeof loadYoBiscuitWebAudioBuffer==='function')loadYoBiscuitWebAudioBuffer();},900);var ls=document.getElementById('loading-screen');var portalFast=!!S.arrivedViaVibeJamPortal;if(portalFast){ls.style.transition='none';ls.classList.add('fade-out');ls.style.opacity='0';ls.style.pointerEvents='none';ls.style.display='none';}else{ls.classList.add('fade-out');setTimeout(function(){ls.style.display='none'},1000);}clock.getDelta();syncHudCookieProgress();if(!portalFast)showMission('FIND COOKIE!','Complete '+COOKIE_MAIN_MISSION_GOAL+' missions to win her heart — WASD/SPACE/B/Q/E',3000);}
+(function(){var sb=document.getElementById('shop');if(!sb)return;sb.href=juicedShopUrl();if(!juicedCfg().shopUrl)sb.textContent='JUICED';['mousedown','touchstart','pointerdown','click'].forEach(function(ev){sb.addEventListener(ev,function(e){e.stopPropagation();});});})();
 var juicedIntroLink=document.querySelector('#loading-screen .jc');
 if(juicedIntroLink){
   juicedIntroLink.setAttribute('role','link');
   juicedIntroLink.setAttribute('aria-label','Open Juiced on X');
   juicedIntroLink.setAttribute('tabindex','0');
-  juicedIntroLink.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();window.open('https://x.com/juiced009','_blank','noopener,noreferrer');});
-  juicedIntroLink.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();window.open('https://x.com/juiced009','_blank','noopener,noreferrer');}});
+  juicedIntroLink.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();window.open(juicedCfg().socialUrl,'_blank','noopener,noreferrer');});
+  juicedIntroLink.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();window.open(juicedCfg().socialUrl,'_blank','noopener,noreferrer');}});
 }
 document.addEventListener('click',function(e){if(e.target&&e.target.id==='at')return;startGame();});
 document.addEventListener('touchend',function(e){if(e.target&&e.target.id==='at')return;startGame();},{passive:true});
@@ -1695,12 +1720,64 @@ function placeAllBoxyBuildings(){
   }
 }
 function cookieWinsReady(){return S.missionsCompleted>=S.missionsRequired;}
+function juicedCfg(){var d={shopUrl:'',socialUrl:'https://x.com/juiced009',handle:'@juiced009',discountCode:'',discountText:'',gameUrl:'hoodhound.site',gameLink:'https://hoodhound.site/'};var c=window.JUICED||{};for(var k in c)if(c[k]!=null)d[k]=c[k];return d;}
+function juicedShopUrl(){var c=juicedCfg();return c.shopUrl||c.socialUrl;}
+function escHtml(t){return String(t).replace(/[&<>"']/g,function(ch){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch];});}
+function juicedRunStats(){var secs=S.playStartedAt?Math.max(1,Math.round((Date.now()-S.playStartedAt)/1000)):0;var m=Math.floor(secs/60),sx=secs%60;return {bones:S.bones,rep:S.rep,missions:S.missionsCompleted,time:m+':'+(sx<10?'0':'')+sx,drop:!!S.juicedDrop};}
+function loadImg(src){return new Promise(function(res){var im=new Image();im.onload=function(){res(im);};im.onerror=function(){res(null);};im.src=src;});}
+/** 1080x1350 share card (Instagram portrait). Resolves to a PNG Blob. */
+function makeJuicedShareCard(){
+  var c=juicedCfg(),st=juicedRunStats();
+  var fontsReady=(document.fonts&&document.fonts.load)?Promise.all([document.fonts.load('80px Bungee'),document.fonts.load('700 40px "Barlow Condensed"')]).catch(function(){}):Promise.resolve();
+  return Promise.all([fontsReady,loadImg('art/hood_hound_intro.webp'),loadImg('art/juiced_logo.png')]).then(function(r){
+    var poster=r[1],logo=r[2],W=1080,H=1350,cv=document.createElement('canvas');cv.width=W;cv.height=H;var x=cv.getContext('2d');
+    x.fillStyle='#0b0a0d';x.fillRect(0,0,W,H);
+    var g=x.createRadialGradient(W/2,420,60,W/2,420,760);g.addColorStop(0,'rgba(255,61,127,.55)');g.addColorStop(.55,'rgba(255,140,26,.18)');g.addColorStop(1,'rgba(0,0,0,0)');x.fillStyle=g;x.fillRect(0,0,W,H);
+    if(poster){x.save();x.shadowColor='rgba(255,61,127,.6)';x.shadowBlur=50;x.drawImage(poster,150,40,780,780);x.restore();}
+    x.textAlign='center';x.textBaseline='middle';
+    x.font='64px Bungee, Impact, sans-serif';var tg=x.createLinearGradient(200,0,880,0);tg.addColorStop(0,'#ff3d7f');tg.addColorStop(.5,'#ff8c1a');tg.addColorStop(1,'#f7b733');
+    x.fillStyle=tg;x.fillText('CERTIFIED HOOD HOUND',W/2,870);
+    var items=[['BONES',st.bones],['REP',st.rep],['MISSIONS',st.missions],['TIME',st.time]],tw=225,gap=20,x0=(W-(tw*4+gap*3))/2;
+    for(var i=0;i<4;i++){var tx=x0+i*(tw+gap);x.fillStyle='rgba(255,255,255,.08)';x.strokeStyle='rgba(247,183,51,.5)';x.lineWidth=3;
+      if(x.roundRect){x.beginPath();x.roundRect(tx,930,tw,150,22);x.fill();x.stroke();}else{x.fillRect(tx,930,tw,150);x.strokeRect(tx,930,tw,150);}
+      x.fillStyle='#f7b733';x.font='60px Bungee, Impact, sans-serif';x.fillText(String(items[i][1]),tx+tw/2,990);
+      x.fillStyle='#cfcfcf';x.font='700 30px "Barlow Condensed", sans-serif';x.fillText(items[i][0],tx+tw/2,1048);}
+    if(logo){var lw=380,lh=lw*logo.height/logo.width;x.drawImage(logo,(W-lw)/2,1112,lw,lh);}
+    x.fillStyle='#a6e629';x.font='700 38px "Barlow Condensed", sans-serif';x.fillText((st.drop?'LIMITED DROP UNLOCKED  •  ':'')+'STAY JUICED  •  '+String(c.handle).toUpperCase(),W/2,1268);
+    x.fillStyle='#ffffff';x.font='34px Bungee, Impact, sans-serif';x.fillText('PLAY FREE: '+String(c.gameUrl).toUpperCase(),W/2,1316);
+    return new Promise(function(res){cv.toBlob(function(b){res(b);},'image/png');});
+  });
+}
+function shareJuicedCard(btn){
+  var c=juicedCfg();if(btn){btn.disabled=true;btn.textContent='MAKING CARD...';}
+  makeJuicedShareCard().then(function(blob){
+    var done=function(){if(btn){btn.disabled=false;btn.textContent='SHARE MY CARD';}};
+    if(!blob){done();return;}
+    var file=null;try{file=new File([blob],'hood-hound-juiced.png',{type:'image/png'});}catch(e){}
+    var text='Beat Hood Hound in '+juicedRunStats().time+' 🐶 Stay Juiced '+c.handle;
+    if(file&&navigator.canShare&&navigator.canShare({files:[file]})){
+      navigator.share({files:[file],title:'Hood Hound x Juiced',text:text+' '+c.gameLink}).catch(function(){}).then(done);return;}
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='hood-hound-juiced.png';document.body.appendChild(a);a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},2000);done();
+  });
+}
 function showCookieWinOverlay(){
-var wo=document.createElement('div');
-wo.style.cssText='position:fixed;inset:0;z-index:500;background:radial-gradient(circle,rgba(255,68,170,0.4),rgba(0,0,0,0.85));display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;animation:fu 1s ease forwards;pointer-events:none';
-wo.innerHTML='<div style="font-family:Bungee,cursive;font-size:clamp(2rem,8vw,5rem);background:linear-gradient(90deg,#ff44aa,#ffaa44,#ff44aa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 0 30px #ff44aa">YOU WIN!</div><div style="font-size:1.5rem;color:#ffaaee;margin-top:20px;font-family:Bungee,cursive">Biscuit + Cookie 4ever 💕</div><div style="margin-top:30px;color:#ccc">Bones: '+S.bones+' | Rep: '+S.rep+'</div><div style="margin-top:40px;color:#888;font-size:0.9rem">Click anywhere to keep playing</div>';
-document.body.appendChild(wo);
-setTimeout(function(){wo.style.transition='opacity 1s';wo.addEventListener('click',function(){wo.style.opacity=0;setTimeout(function(){wo.remove();},1000);});document.addEventListener('click',function fc(){wo.style.opacity=0;setTimeout(function(){wo.remove();},1000);document.removeEventListener('click',fc);},{once:true});},11000);
+  if(document.getElementById('endcard'))return;
+  var c=juicedCfg(),st=juicedRunStats();
+  try{localStorage.setItem('hoodHoundJuicedWin',JSON.stringify({at:Date.now(),code:c.discountCode}));}catch(e){}
+  var wo=document.createElement('div');wo.id='endcard';
+  var code=c.discountCode?'<div class="ec-code"><small>UNLOCKED: '+escHtml(c.discountText||'JUICED DISCOUNT')+'</small><div class="ec-cv"><code>'+escHtml(c.discountCode)+'</code><button class="ec-copy" type="button">COPY</button></div></div>':'';
+  wo.innerHTML='<div class="ec"><div class="ec-t">YOU WIN!</div><div class="ec-s">Biscuit &amp; Cookie head home together. Respect, dawg.</div>'+
+    '<div class="ec-stats"><div class="ec-stat"><b>'+st.bones+'</b><span>BONES</span></div><div class="ec-stat"><b>'+st.rep+'</b><span>REP</span></div><div class="ec-stat"><b>'+st.missions+'</b><span>MISSIONS</span></div><div class="ec-stat"><b>'+st.time+'</b><span>TIME</span></div></div>'+
+    code+'<a class="ec-b ec-shop" href="'+escHtml(juicedShopUrl())+'" target="_blank" rel="noopener">SHOP THE FIT</a>'+
+    '<button class="ec-share" type="button">SHARE MY CARD</button><button class="ec-again" type="button">PLAY AGAIN</button>'+
+    '<img class="ec-logo" src="art/juiced_logo.png" alt="Juiced"></div>';
+  document.body.appendChild(wo);
+  ['mousedown','mouseup','click','touchstart','touchend','pointerdown','keydown'].forEach(function(ev){wo.addEventListener(ev,function(e){e.stopPropagation();});});
+  var cp=wo.querySelector('.ec-copy');if(cp)cp.addEventListener('click',function(){var done=function(){cp.textContent='COPIED!';setTimeout(function(){cp.textContent='COPY';},1800);};
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(c.discountCode).then(done,done);else{var ta=document.createElement('textarea');ta.value=c.discountCode;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}ta.remove();done();}});
+  wo.querySelector('.ec-share').addEventListener('click',function(){shareJuicedCard(this);});
+  wo.querySelector('.ec-again').addEventListener('click',function(){window.location.reload();});
 }
 function modelCandidates(list){
 var out=[],seen={};
@@ -4263,7 +4340,7 @@ document.addEventListener('mousemove',function(e){if(S.mouseDown){S.cameraAngleH
 renderer.domElement.addEventListener('contextmenu',function(e){e.preventDefault();});
 // Touch-drag camera on canvas (right half of screen on mobile, excludes joystick & UI)
 var camTouchId=null;
-function isUIElement(el){if(!el)return false;var id=el.id||'';if(id==='jz'||id==='jth'||id==='bb'||id==='bsn'||id==='bac'||id==='bj'||id==='bf'||id==='bp'||id==='at')return true;if(el.closest){if(el.closest('#jz'))return true;if(el.closest('#mc'))return true;if(el.closest('#hud'))return true;if(el.closest('#at'))return true;}return false;}
+function isUIElement(el){if(!el)return false;var id=el.id||'';if(id==='jz'||id==='jth'||id==='bb'||id==='bsn'||id==='bac'||id==='bj'||id==='bf'||id==='bp'||id==='at'||id==='shop')return true;if(el.closest&&el.closest('#endcard'))return true;if(el.closest){if(el.closest('#jz'))return true;if(el.closest('#mc'))return true;if(el.closest('#hud'))return true;if(el.closest('#at'))return true;}return false;}
 renderer.domElement.addEventListener('touchstart',function(e){
   for(var i=0;i<e.changedTouches.length;i++){
     var t=e.changedTouches[i];
