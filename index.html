@@ -91,8 +91,8 @@ body.mp-open #tut{opacity:1;transition:opacity .35s ease}
 <div id="cb" role="log" aria-label="Keyboard controls"><span class="ct"><kbd>WASD</kbd> move</span><span class="ct"><kbd>Shift</kbd> sprint</span><span class="ct"><kbd>Q</kbd> sniff</span><span class="ct"><kbd>F</kbd> / <kbd>B</kbd> bark</span><span class="ct"><kbd>H</kbd> poop</span><span class="ct"><kbd>E</kbd> interact</span><span class="ct"><kbd>G</kbd> fart</span><span class="ct"><kbd>Space</kbd> jump / dismiss pop-up</span><span class="ct">mouse = camera</span></div>
 <div id="mc"><div class="jz" id="jz"><div class="jb"></div><div class="jt" id="jth"></div></div><div class="ab"><div class="abtn" id="bb">BARK</div><div class="abtn" id="bsn">SNIFF</div><div class="abtn" id="bac">ACT</div><div class="abtn" id="bj">JUMP</div><div class="abtn" id="bf">FART</div><div class="abtn" id="bp">POOP</div></div></div>
 <div id="mm"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="lib/three.min.js"></script>
+<script src="lib/GLTFLoader.js"></script>
 <script src="vibejam-portal.js?v=vj20260430local"></script>
 <script>
 
@@ -1303,19 +1303,6 @@ function tryLoadRandomGraffitiPng(){
     }
     return makeJuiced009GraffSpecForBuilding(b);
   }
-  function pushJuiced009RegularGraff(gk, bi, towardX, towardZ){
-    if(gk==null||!graffitiTexByKey[gk]||!boxBuildings[bi]) return;
-    excl[bi]=1; oi++;
-    var rt=graffitiTexByKey[gk], rb=boxBuildings[bi],
-      rsp=arguments.length>=4?makeJuiced009GraffSpecNearRoad(rb, towardX, towardZ):makeJuiced009GraffSpecForBuilding(rb);
-    rsp.k=gk;
-    rsp.hoodJuicedMark=1;
-    rsp.o=Math.max(rsp&&rsp.o!==undefined&&rsp.o!==null?rsp.o:0.12,0.26);
-    if(!matCache2[gk]){ matCache2[gk]=new THREE.MeshBasicMaterial({map:rt, transparent:true, side:THREE.DoubleSide, depthTest:true, depthWrite:false, premultipliedAlpha:false, opacity:1, polygonOffset:true, polygonOffsetFactor:-5, polygonOffsetUnits:-3});
-      if(matCache2[gk].toneMapped!==undefined) matCache2[gk].toneMapped=false; }
-    addUserGraffitiPngToBuilding(rb, matCache2[gk], rsp);
-    items.push({bi:bi, k:gk, face:rsp.face, pw:rsp.pw, ph:rsp.ph, yP:rsp.yP, u:rsp.u, o:rsp.o});
-  }
   function placeWhenReady(){
     var keyList=Object.keys(graffitiTexByKey);
     if(!keyList.length) return;
@@ -1381,6 +1368,19 @@ function tryLoadRandomGraffitiPng(){
     oi=0; excl={};
     var hcx=HOOD_GUY_WORLD_X, hcz=HOOD_GUY_WORLD_Z;
     if(typeof hoodGuy!=='undefined'&&hoodGuy&&hoodGuy.position){ hcx=hoodGuy.position.x; hcz=hoodGuy.position.z; }
+    function pushJuiced009RegularGraff(gk, bi, towardX, towardZ){
+      if(gk==null||!graffitiTexByKey[gk]||!boxBuildings[bi]) return;
+      excl[bi]=1; oi++;
+      var rt=graffitiTexByKey[gk], rb=boxBuildings[bi],
+        rsp=arguments.length>=4?makeJuiced009GraffSpecNearRoad(rb, towardX, towardZ):makeJuiced009GraffSpecForBuilding(rb);
+      rsp.k=gk;
+      rsp.hoodJuicedMark=1;
+      rsp.o=Math.max(rsp&&rsp.o!==undefined&&rsp.o!==null?rsp.o:0.12,0.26);
+      if(!matCache2[gk]){ matCache2[gk]=new THREE.MeshBasicMaterial({map:rt, transparent:true, side:THREE.DoubleSide, depthTest:true, depthWrite:false, premultipliedAlpha:false, opacity:1, polygonOffset:true, polygonOffsetFactor:-5, polygonOffsetUnits:-3});
+        if(matCache2[gk].toneMapped!==undefined) matCache2[gk].toneMapped=false; }
+      addUserGraffitiPngToBuilding(rb, matCache2[gk], rsp);
+      items.push({bi:bi, k:gk, face:rsp.face, pw:rsp.pw, ph:rsp.ph, yP:rsp.yP, u:rsp.u, o:rsp.o});
+    }
     function pushFullBleed(gk, bi, faceWX, faceWZ){
       if(gk==null||!graffitiTexByKey[gk]||!boxBuildings[bi]) return;
       var b0=boxBuildings[bi];
